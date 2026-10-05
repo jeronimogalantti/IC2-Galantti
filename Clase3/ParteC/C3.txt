@@ -1,0 +1,17 @@
+a)
+docker run -d --name api api-libros
+
+d30078e56ef2ce74b06eeda29ebc616f99cb6607b1799e70ad07074c99cbc3be
+
+curl.exe http://localhost:8000/
+
+curl: (7) Failed to connect to localhost:8000 after 2241 ms: Could not connect to server
+
+b)
+docker run -d --name api -p 8000:8000 api-libros
+
+cfadf8c1cee06b7f272a6b571788da8ae7af102503afd9de30467a037722e071
+
+curl.exe http://localhost:8000/
+
+curl: (52) Empty reply from server
